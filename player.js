@@ -24,3 +24,10 @@ const playlist1 = {
     ]
   }
   // render
+let playlistTitleElement = document.createElement('h1');
+playlistTitleElement.append(playlist1.title);
+document.body.append(playlistTitleElement);
+
+let playlistImageElement = document.createElement('img');
+playlistImageElement.src = playlist1.coverImageUrl;
+document.body.append(playlistImageElement);
