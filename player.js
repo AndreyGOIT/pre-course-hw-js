@@ -70,9 +70,9 @@ function renderPlaylistHeader(playlistForRendering){
 } 
 
 function renderTrack(inputTrackForRendering){
-  let track1Element = document.createElement("div");
-  track1Element.append(
+  let trackElement = document.createElement("div");
+  trackElement.append(
     inputTrackForRendering.artistName + " - " + inputTrackForRendering.title
   );
-  document.body.append(track1Element);
+  document.body.append(trackElement);
 } 
