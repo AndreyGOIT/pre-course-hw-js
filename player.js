@@ -24,27 +24,32 @@ const playlist1 = {
   ],
 };
 // render
-let playlistImageElement = document.createElement("img");
-playlistImageElement.src = playlist1.coverImageUrl;
-document.body.append(playlistImageElement);
+renderPlaylist(playlist1);
 
-let playlistTitleElement = document.createElement("h1");
-playlistTitleElement.append(playlist1.title);
-document.body.append(playlistTitleElement);
+function renderPlaylist(playlistForRendering) {
+  // all render code should be here.
+  let playlistImageElement = document.createElement("img");
+  playlistImageElement.src = playlist1.coverImageUrl;
+  document.body.append(playlistImageElement);
 
-let trackListElement = document.createElement("ul");
+  let playlistTitleElement = document.createElement("h1");
+  playlistTitleElement.append(playlist1.title);
+  document.body.append(playlistTitleElement);
 
-let track1Element = document.createElement("li");
-track1Element.append(
-  playlist1.tracks[0].artistName + " - " + playlist1.tracks[0].title
-);
+  let trackListElement = document.createElement("ul");
 
-let track2Element = document.createElement("li");
-track2Element.append(
-  playlist1.tracks[1].artistName + " - " + playlist1.tracks[1].title
-);
+  let track1Element = document.createElement("li");
+  track1Element.append(
+    playlist1.tracks[0].artistName + " - " + playlist1.tracks[0].title
+  );
 
-trackListElement.append(track1Element);
-trackListElement.append(track2Element);
+  let track2Element = document.createElement("li");
+  track2Element.append(
+    playlist1.tracks[1].artistName + " - " + playlist1.tracks[1].title
+  );
 
-document.body.append(trackListElement);
+  trackListElement.append(track1Element);
+  trackListElement.append(track2Element);
+
+  document.body.append(trackListElement);
+}
