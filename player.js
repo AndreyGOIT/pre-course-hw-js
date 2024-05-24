@@ -54,23 +54,9 @@ renderPlaylist(playlist2);
 function renderPlaylist(playlistForRendering) {
   renderPlaylistHeader(playlistForRendering);
   
-
-  let trackListElement = document.createElement("ul");
-
-  let track1Element = document.createElement("li");
-  track1Element.append(
-    playlistForRendering.tracks[0].artistName + " - " + playlistForRendering.tracks[0].title
-  );
-
-  let track2Element = document.createElement("li");
-  track2Element.append(
-    playlistForRendering.tracks[1].artistName + " - " + playlistForRendering.tracks[1].title
-  );
-
-  trackListElement.append(track1Element);
-  trackListElement.append(track2Element);
-
-  document.body.append(trackListElement);
+  renderTrack(playlistForRendering.tracks[0]);
+  renderTrack(playlistForRendering.tracks[1]);
+  
 }
 
 function renderPlaylistHeader(playlistForRendering){
@@ -82,6 +68,11 @@ function renderPlaylistHeader(playlistForRendering){
   playlistTitleElement.append(playlistForRendering.title);
   document.body.append(playlistTitleElement);
 } 
+
 function renderTrack(inputTrackForRendering){
-  // здесь логика отрисовки "входного" трека
+  let track1Element = document.createElement("div");
+  track1Element.append(
+    inputTrackForRendering.artistName + " - " + inputTrackForRendering.title
+  );
+  document.body.append(track1Element);
 } 
