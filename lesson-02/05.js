@@ -2,8 +2,8 @@ let passport = {
     name: "Petr",
     surname: "Petrov",
 };
-const copy = structuredClone(passport);
-copy.name = "Ivan";
+const passport2 = structuredClone(passport);
+passport2.name = "Ivan";
 
 console.log(passport);
-console.log(copy);
+console.log(passport2);
