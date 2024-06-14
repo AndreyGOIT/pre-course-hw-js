@@ -2,6 +2,9 @@ let timerId; // переменная, которая будет хранить I
 
 const startButton = document.getElementById('start');
 startButton.addEventListener('click', function () {
+    if (timerId) {
+        clearInterval(timerId); // останавливаем предыдущий таймер, если он существует
+    }
     timerId = setInterval(updateClock, 1000); // 
 });
 
